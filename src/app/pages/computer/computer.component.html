@@ -1,0 +1,32 @@
+<form [formGroup]="formGroup">
+  <div class="mb-2">
+    <label class="mr-2">Nombre 1</label>
+    <input pInputText formControlName="num1" />
+  </div>
+  <div>
+    <label class="mr-2">Nombre 2</label>
+    <input pInputText formControlName="num2" />
+  </div>
+
+</form>
+<div class="my-3">
+  <div>
+    <button class="mr-2" pButton label="+" (click)="add()"></button>
+    <button class="mr-2" pButton label="-" (click)="sub()"></button>
+    <button class="mr-2" pButton label="/" (click)="div()"></button>
+    <button class="mr-2" pButton label="X" (click)="mult()"></button>
+  </div>
+  <div class="mt-3">
+    <button pButton label="+" (click)="strategy(operators.add)"></button>
+    <button pButton label="-" (click)="strategy(operators.substract)"></button>
+    <button pButton label="/" (click)="strategy(operators.divide)"></button>
+    <button pButton label="X" (click)="strategy(operators.multiply)"></button>
+  </div>
+
+
+</div>
+
+
+
+
+<div>Résultat : {{ result }}</div>

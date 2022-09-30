@@ -1,0 +1,7 @@
+<form [formGroup]="formGroup">
+  <div class="mb-3 text-lg">Ajouter un utilisateur</div>
+  <input pInputText type="text" formControlName="name" />
+  <button class="ml-3" pButton label="Ajouter" (click)="submit()"></button>
+</form>
+<div class="text-lg my-3">Liste des utilisateurs</div>
+<p-listbox styleClass="mt-3" [options]="users" optionLabel="name"></p-listbox>
